@@ -1,6 +1,7 @@
 #   K nearest neighbors is a classification algorithm. It determines k points closest to the data to be classified using eucledian 
 #   distance. The data is classified as the type having most number of votes among the k votes.
 
+#   data source:http://mlr.cs.umass.edu/ml/machine-learning-databases/breast-cancer-wisconsin/
 import pandas as pd
 import numpy as np
 from collections import Counter
