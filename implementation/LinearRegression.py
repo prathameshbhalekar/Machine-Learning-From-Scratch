@@ -4,7 +4,7 @@ import numpy as np
 class LinearRegression:
     """
     ### Parameters
-    1. regularization : { "None" , "L1" , "L2"} , Default = "None"
+    1. regularization : { "None" , "L1" , "L2"} , Default = "None"\n
         Acts as Normal Linear Regression, Lasso Regression, Ridge
         Regression respectively if "None" , "L1" or "L2".  
     """
@@ -15,12 +15,12 @@ class LinearRegression:
     def mse(self, y, y_hat) -> float:
         '''
         ### Parameters
-        1. y : Numpy.array
+        1. y : Numpy.array\n
             Actual dependent feature
-        2. y_hat : Numpy.array
+        2. y_hat : Numpy.array\n
             Predicted dependent feature
 
-        ### Returns : Float
+        ### Returns : Float\n
             The mean squared error of the model.
         '''
         diff = y - y_hat
@@ -37,18 +37,18 @@ class LinearRegression:
     def fit(self, x, y, print_every_nth_epoch=1, epochs=100, learning_rate=0.1, lambda_=0.01):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             independent features
-        2. y : Numpy.array
+        2. y : Numpy.array\n
             dependent features
-        3. print_every_nth_epoch : Int , Default = 1
+        3. print_every_nth_epoch : Int , Default = 1\n
             prints mse after every 'print_every_nth_epoch'th epoch
-        4. epochs : Int , Default = 100
+        4. epochs : Int , Default = 100\n
             number of epoch for training the model
-        5. learning_rate : Float , Default = 0.1
+        5. learning_rate : Float , Default = 0.1\n
             hyper parameter for gradient descent algorithm.
             governs rate of diversion
-        6. lambda_ : Float , Default = 0.01
+        6. lambda_ : Float , Default = 0.01\n
             penalty factor for regulaization. Not 
             needed while using normal regression.
 
@@ -92,10 +92,10 @@ class LinearRegression:
     def predict(self, x):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             independent features
 
-        ### Returns : Numpy
+        ### Returns : Numpy\n
             Returns predicted dependent feature
         '''
 

@@ -4,9 +4,9 @@ from implementation.DecisionTree import DecisionTree
 class RandomForest:
     '''
     ### Parameters
-    1. n_estimators : int , Default = 10
+    1. n_estimators : int , Default = 10\n
         Number of estimators
-    2. impurity : {"entropy" , "gini"} : Default = "entropy"
+    2. impurity : {"entropy" , "gini"} : Default = "entropy"\n
         Metric for measuring impurity. Entropy and gini impurity
         respectively if "entropy" or "gini" for decision trees.
     '''
@@ -20,19 +20,19 @@ class RandomForest:
             n_random_samples=None,):
         '''
         ### Parameters
-        1. x : Numpy.array 
+        1. x : Numpy.array \n
             independent features
-        2. y : Numpy.array 
+        2. y : Numpy.array \n
             actual classification
-        3. threshold_impurity : float , Default = 0.1
+        3. threshold_impurity : float , Default = 0.1\n
             minimum impurity for splitting for individual trees
-        4. max_depth : int , Default = 100
+        4. max_depth : int , Default = 100\n
             maximum depth for splitting
-        5. n_random_features : int , Default = None
+        5. n_random_features : int , Default = None\n
             Uses 'n_random_features' features to 
             determine maximum information gain for individual trees. Uses all 
             if None.
-        6. n_random_samples : int , Default = None
+        6. n_random_samples : int , Default = None\n
             Uses 'n_random_samples' samples to 
             determine maximum information gain for individual trees. Uses all 
             if None.  
@@ -52,7 +52,7 @@ class RandomForest:
     def predict(self, x):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             independent features
 
         ### Returns 

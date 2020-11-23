@@ -4,12 +4,12 @@ import numpy as np
 class SupportVectorMachine:
     '''
     ### Parameters
-    1. C : float , Default = 10.
+    1. C : float , Default = 10\n
         Hyperparameter for loss function
-    2. kernel : {"None" , "gaussian"} , Default = "None"
+    2. kernel : {"None" , "gaussian"} , Default = "None"\n
         Uses no kernel , gaussian kernel if "None" or
         "gaussian" respectively
-    3. sigma_sq : float , Default = 0.1
+    3. sigma_sq : float , Default = 0.1\n
         Hyperparameter for gaussian kernel
     '''
 
@@ -21,9 +21,9 @@ class SupportVectorMachine:
     def __similarity(self, x, l):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             first vector
-        2. l : Numpy.array
+        2. l : Numpy.array\n
             second vector
         
         ### Returns : float
@@ -34,9 +34,9 @@ class SupportVectorMachine:
     def gaussian_kernel(self, x1, x):
         '''
         ### Parameters 
-        1. x1 : Numpy.array
+        1. x1 : Numpy.array\n
             vector on which kernel is to be applied
-        2. x : Numpy.array
+        2. x : Numpy.array\n
             vector w.r.t which kernel is to be applied
         
         ### Returns
@@ -51,9 +51,9 @@ class SupportVectorMachine:
     def loss_function(self, y, y_hat):
         '''
         ### Parameters
-        1. y : Numpy.array
+        1. y : Numpy.array/n
             actual classification
-        2. y_hat : Numpy.array
+        2. y_hat : Numpy.array/n
             predicted classification
         
         ### Returns 
@@ -68,15 +68,15 @@ class SupportVectorMachine:
     def fit(self, x_train, y_train, print_every_nth_epoch = 1, epochs=100, learning_rate=0.1):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             independent features
-        2. y : Numpy.array
+        2. y : Numpy.array\n
             actual classification
-        3. print_every_nth_epoch : Int , Default = 1
+        3. print_every_nth_epoch : Int , Default = 1\n
             prints loss after every 'print_every_nth_epoch'th epoch
-        4. epochs : Int , Default = 100
+        4. epochs : Int , Default = 100\n
             number of epoch for training the model
-        5. learning_rate : Float , Default = 0.1
+        5. learning_rate : Float , Default = 0.1\n
             hyper parameter for gradient descent algorithm.
             governs rate of diversion
         '''
@@ -124,9 +124,9 @@ class SupportVectorMachine:
     def evaluate(self, x, y):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             independent features
-        2. y : Numpy.array
+        2. y : Numpy.array\n
             actual classification
 
         ### Returns
@@ -140,10 +140,10 @@ class SupportVectorMachine:
     def predict(self, x):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             independent features
 
-        ### Returns : Numpy
+        ### Returns : Numpy\n
             Returns predicted classification
         '''
         # Applying kernel

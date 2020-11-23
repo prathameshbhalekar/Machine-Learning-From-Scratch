@@ -6,7 +6,7 @@ import random
 class DecisionTree:
     '''
     ### Parameters
-    1. impurity : { "entropy", "gini" } , Default = "entropy"
+    1. impurity : { "entropy", "gini" } , Default = "entropy"\n
         Metric for measuring impurity. Entropy and gini impurity
         respectively if "entropy" or "gini"
     '''
@@ -25,10 +25,10 @@ class DecisionTree:
     def __entropy(self, df) -> float:
         '''
         ### Parameters
-        1. df : Pandas.Dataframe
+        1. df : Pandas.Dataframe\n
             Dataframe at particular node.
 
-        ### Returns : float
+        ### Returns : float\n
             returns entropy of the dataframe
         '''
 
@@ -44,10 +44,10 @@ class DecisionTree:
     def __gini_impurity(self, df) -> float:
         '''
         ### Parameters
-        1. df : Pandas.Dataframe
+        1. df : Pandas.Dataframe\n
             Dataframe at particular node.
 
-        ### Returns : float
+        ### Returns : float\n
             returns gini impurity of the dataframe
         '''
         sum = 0.
@@ -61,14 +61,14 @@ class DecisionTree:
     def __information_gain(self, df, df1, df2) -> float:
         '''
         ### Parameters
-        1. df : Pandas.Dataframe
+        1. df : Pandas.Dataframe\n
             Initial dataframe
-        2. df1 : Pandas.Dataframe
+        2. df1 : Pandas.Dataframe\n
             First dataframe after split
-        3. df2 : Pandas.Dataframe
+        3. df2 : Pandas.Dataframe\n
             Second dataframe after split
 
-        ### Returns : float
+        ### Returns : float\n
             Information Gain after split
         '''
 
@@ -100,12 +100,12 @@ class DecisionTree:
     def __fit_util(self, df, depth) -> node:
         '''
         ### Parameters
-        1. df : Pandas.Dataframe
+        1. df : Pandas.Dataframe\n
             dataframe to be classified
-        2. depth : int
+        2. depth : int\n
             height of tree above the node
 
-        ### Returns : node
+        ### Returns : node\n
             subtree to classify "df"
         '''
 
@@ -171,23 +171,23 @@ class DecisionTree:
             random_picking=False):
         '''
         ### Parameters
-        1. x : Numpy.array 
+        1. x : Numpy.array \n
             independent features
-        2. y : Numpy.array 
+        2. y : Numpy.array \n
             actual classification
-        3. threshold_impurity : float , Default = 0.1
+        3. threshold_impurity : float , Default = 0.1\n
             minimum impurity for splitting
-        4. max_depth : int , Default = 100
+        4. max_depth : int , Default = 100\n
             maximum depth for splitting
-        5. n_random_features : int , Default = None
+        5. n_random_features : int , Default = None\n
             Uses 'n_random_features' features to 
             determine maximum information gain. Uses all 
             if None.
-        6. n_random_samples : int , Default = None
+        6. n_random_samples : int , Default = None\n
             Uses 'n_random_samples' samples to 
             determine maximum information gain. Uses all 
             if None.  
-        7. random_picking : boolean , Default = False
+        7. random_picking : boolean , Default = False\n
             Picks random samples with replacement for
             training if True(for Random Forest).
         '''
@@ -216,11 +216,11 @@ class DecisionTree:
     def __predict_util(self, n, df):
         '''
         ### Parameters
-        1. n : node
+        1. n : node\n
             Current node
-        2. df : Pandas.DataSeries
+        2. df : Pandas.DataSeries\n
 
-        ### Returns : Any
+        ### Returns : Any\n
             Predicited Classification
         '''
 
@@ -235,10 +235,10 @@ class DecisionTree:
     def predict(self, x):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             independent features
 
-        ### Returns 
+        ### Returns \n
             predicted classifications
         '''
         df = pd.DataFrame(x)

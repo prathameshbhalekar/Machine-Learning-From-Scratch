@@ -5,12 +5,12 @@ from implementation.DecisionTree import DecisionTree
 class AdaBoost:
     '''
     ### Parameters
-    1. n_estimators : int , Default = 100
+    1. n_estimators : int , Default = 100\n
         Number of estimators
-    2. random_sampling : boolean , Default = False
+    2. random_sampling : boolean , Default = False\n
         If True drops samples whith low weights after training each
         estimators
-    3. impurity : { "entropy", "gini" } , Default = "entropy"
+    3. impurity : { "entropy", "gini" } , Default = "entropy"\n
         Metric for measuring impurity. Entropy and gini impurity
         respectively if "entropy" or "gini"
     '''
@@ -25,11 +25,11 @@ class AdaBoost:
     def __get_total_sample_weights(self,predictions,y,sample_weights) -> float:
         '''
         ### Parameters
-        1. predictions : Numpy.array
+        1. predictions : Numpy.array\n
             Predicted classification
-        2. y : Numpy.array
+        2. y : Numpy.array\n
             Actual classification
-        3. sample_weights : Numpy.array
+        3. sample_weights : Numpy.array\n
             Weights of samples
         
         ### Returns 
@@ -47,7 +47,7 @@ class AdaBoost:
     def __get_say(self,total_sample_weight):
         '''
         ### Parameters 
-        1. total_sample_weight : float
+        1. total_sample_weight : float\n
             Total weights of incorrectly classified samples
         '''
         return np.log((1 - total_sample_weight) / total_sample_weight) / 2
@@ -55,11 +55,11 @@ class AdaBoost:
     def fit(self, x, y, print_every_nth_estimator = 1):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             Independent features
-        2. y : Numpy.array
+        2. y : Numpy.array\n
             Actual classification
-        3. print_every_nth_estimator : int , Default = 1
+        3. print_every_nth_estimator : int , Default = 1\n
             Notifies after training "print_every_nth_estimator"th estimator
         '''
 
@@ -116,7 +116,7 @@ class AdaBoost:
     def predict(self,x):
         '''
         ### Parameters
-        1.x : Numpy.array 
+        1.x : Numpy.array \n
             Independent Features
 
         ### Returns : Numpy.array
