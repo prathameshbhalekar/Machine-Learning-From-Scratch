@@ -22,9 +22,9 @@ class DecisionTreeRegression:
         
         '''
         ### Parameters
-        1. df : Pandas.Dataframe
+        1. df : Pandas.Dataframe\n
             dataframe to be classified
-        2. depth : int
+        2. depth : int\n
             height of tree above the node
 
         ### Returns : node
@@ -110,23 +110,23 @@ class DecisionTreeRegression:
 
         '''
         ### Parameters
-        1. x : Numpy.array 
+        1. x : Numpy.array \n
             independent features
-        2. y : Numpy.array 
+        2. y : Numpy.array \n
             actual classification
-        3. threshold_impurity : float , Default = 0.1
+        3. threshold_impurity : float , Default = 0.1\n
             minimum impurity for splitting
-        4. max_depth : int , Default = 100
+        4. max_depth : int , Default = 100\n
             maximum depth for splitting
-        5. n_random_features : int , Default = None
+        5. n_random_features : int , Default = None\n
             Uses 'n_random_features' features to 
             determine maximum information gain. Uses all 
             if None.
-        6. n_random_samples : int , Default = None
+        6. n_random_samples : int , Default = None\n
             Uses 'n_random_samples' samples to 
             determine maximum information gain. Uses all 
             if None.
-        7. min_samples : int , Default = 5
+        7. min_samples : int , Default = 5\n
             Minimum samples required for splitting 
         '''
 
@@ -146,9 +146,9 @@ class DecisionTreeRegression:
     def __predict_util(self, n : node, df : pd.DataFrame) :
         '''
         ### Parameters
-        1. n : node
+        1. n : node\n
             Current node
-        2. df : Pandas.DataSeries
+        2. df : Pandas.DataSeries\n
 
         ### Returns : Any
             Predicited Classification
@@ -165,7 +165,7 @@ class DecisionTreeRegression:
     def predict(self, x):
         '''
         ### Parameters
-        1. x : Numpy.array
+        1. x : Numpy.array\n
             independent features
 
         ### Returns 
